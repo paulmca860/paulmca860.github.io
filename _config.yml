@@ -6,15 +6,13 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            Paul McAvoy
+tagline:          'Homepage'
+description:      'Blog by Paul McAvoy, Built with the Hyde Jekyll Theme by <a href="https://twitter.com/mdo">@mdo</a>'
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Paul McAvoy'
 
 paginate:         5
 
