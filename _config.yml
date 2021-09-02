@@ -9,8 +9,7 @@ permalink:        pretty
 title:            Paul McAvoy
 tagline:          'Homepage'
 description:      'Blog by Paul McAvoy, Built with the Hyde Jekyll Theme by <a href="https://twitter.com/mdo">@mdo</a>.'
-baseurl:          /
-aboutPage:        /about.html
+baseurl:          https://paulmca860.github.io/
 
 author:
   name:           'Paul McAvoy'
