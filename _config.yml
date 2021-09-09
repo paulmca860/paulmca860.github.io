@@ -9,6 +9,8 @@ title:            Paul McAvoy
 tagline:          'Homepage'
 description:      'Blog by Paul McAvoy, Built with the Hyde Jekyll Theme by <a href="https://twitter.com/mdo">@mdo</a>.'
 baseurl:          https://paulmca860.github.io/
+cv:               https://drive.google.com/file/d/1XTNOuDZGNOOJzipg2gryEaR79rRQYLao/view?usp=sharing
+
 
 author:
   name:           'Paul McAvoy'
