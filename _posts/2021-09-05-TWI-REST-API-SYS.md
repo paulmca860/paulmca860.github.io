@@ -71,9 +71,9 @@ The Tweet class consists of a simple constructor that builds a basic object whic
       }
  }
  ```
- -The display name of the person who tweeted @FaceFilterBot
- -The username of the person who tweeted @FaceFilterBot
- -The ArrayList of mediaURLs found in the tweet by the getMediaURL function discussed earlier.
+ - The display name of the person who tweeted @FaceFilterBot
+ - The username of the person who tweeted @FaceFilterBot
+ - The ArrayList of mediaURLs found in the tweet by the getMediaURL function discussed earlier.
 
 The following set of functions are the functions used in converting the Status Objects into Tweet Objects. It is pretty self explanatory however, a basic overview is the statusToTweet function creates and returns a tweet object for every status passed in through the status parameter. the `getMediaType(mediaURLs.get(0))` function is a simple function I wrote which simply finds out the type of media the tweet includes by checking the first URL in the mediaURLs ArrayList and checks for a bunch of different file extensions within the URL to determine whether the bot is dealing with photos, videos, or no media. Plain text (no media) is returned as 0, where as photos and videos are 1 and 2 respectively. It checks if there is any media: `if (_mediaType == 0)` and if so it creates a Tweet object with null a null mediaLinks Object. Otherwise it creates a Tweet object containing the necessary mediaURLs.
 
