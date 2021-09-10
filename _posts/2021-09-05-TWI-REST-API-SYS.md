@@ -110,3 +110,35 @@ public Tweet statusToTweet(Status status) {
   return statusToTweet(statuses.get(0));
  }
 ```
+
+### SpringBoot and REST API System Deployment
+
+Once the basic tweet retrieval system was designed I built and deployed a simple REST API service to retrieve tweets and return them when a request is made to a specific URL.
+
+The SpringBoot REST API system works by having a base driver *(Application Class)* in order to launch the server system. For this project the Base class acts as this class and of course this is where the main method is located and is where the REST API system begins. Once the REST API server is online requests are made through the use of REST controllers. Controllers are essentially methods that are carried out when a certain request is received by the REST API service.
+
+The controllers used in this project are just simple GET requests since the entire purpose of the REST API service here is to return the tweets received in a JSON format.
+
+The two main controllers in this project are as follows *(b is an instance of the Bot (the class containing all Twitter API interaction stuff and tweet retrieval stuff) class)*:
+
+- `/getTweets` mapping. Returns all tweets collected in JSON format.
+```
+@GetMapping("/getTweets")
+public ArrayList<Tweet> getTweets() {
+    b.handleSearch();
+    return b.statusesToTweets();
+}
+```
+This mapping returns all collected tweets by calling completing a search by calling the `handleSearch()` method in the Bot object then returning the `ArrayList<Tweet>` returned by `statusesToTweets()` as discussed earlier. This returns a JSON structured array of Tweet data.
+
+- `/getRecent` mapping. Returns only the most recent tweet in JSON format.
+```
+@GetMapping("/getRecent")
+public Tweet getRecent() {
+    b.handleSearch();
+    return b.mostRecentStatusToTweet();
+}
+```
+This mapping returns one JSON structured tweet object which is the most recent tweet found, returned by the `mostRecentStatusToTweet()` function as discussed earlier.
+
+#### Deployment
